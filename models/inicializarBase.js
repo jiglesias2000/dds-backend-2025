@@ -2,6 +2,7 @@ const sequelize = require('./configurarSequelize');
 const categorias = require('./categoriasModel');
 const articulos = require('./articulosModel');
 const usuarios = require('./usuariosModel');
+const contactos = require('./contactosModel');
 
 if (require.main === module) {
   inicializarBase();    // si se ejecuta este archivo directamente, inicializa la base de datos, si no se lo ejecutara antes de levantar el servidor
@@ -27,6 +28,7 @@ if (require.main === module) {
     await DatosCategorias();
     await DatosArticulos();
     await DatosUsuarios();  
+    await DatosContactos();
 
     console.log('Base de datos inicializada y datos de prueba creados.');
 
@@ -254,6 +256,198 @@ async function DatosUsuarios() {
     { UsuarioId: 3, Nombre: 'ana', Clave: 'ana123', Rol: 'empleado' },
 
   ]); 
+}
+
+async function DatosContactos() {
+  await contactos.bulkCreate(
+    [
+  {
+    "IdContacto": 43,
+    "Nombre": "ABRATE, VICENTE BARTOLO",
+    "FechaNacimiento": "1937-08-10T00:00:00",
+    "Telefono": 152064246,
+    "IdCategoria": 2,
+    "ImporteContribucion": 3847521.45
+  },
+  {
+    "IdContacto": 38,
+    "Nombre": "ACHERVI, MIGUEL ANGEL",
+    "FechaNacimiento": "1946-03-08T00:00:00",
+    "Telefono": 152064435,
+    "IdCategoria": 1,
+    "ImporteContribucion": 1256789.32
+  },
+  {
+    "IdContacto": 36,
+    "Nombre": "AGUIRRE, ANDRES RAFAEL",
+    "FechaNacimiento": "1949-09-09T00:00:00",
+    "Telefono": 152078560,
+    "IdCategoria": 2,
+    "ImporteContribucion": 2987654.10
+  },
+  {
+    "IdContacto": 61,
+    "Nombre": "ALBORNOZ, SILVIA BEATRIZ",
+    "FechaNacimiento": "1946-08-15T00:00:00",
+    "Telefono": 152454098,
+    "IdCategoria": 1,
+    "ImporteContribucion": 4567892.55
+  },
+  {
+    "IdContacto": 65,
+    "Nombre": "ALIENDRO, OLGA",
+    "FechaNacimiento": "1938-01-11T00:00:00",
+    "Telefono": 152735849,
+    "IdCategoria": 3,
+    "ImporteContribucion": 3210987.67
+  },
+  {
+    "IdContacto": 66,
+    "Nombre": "AMERI, OLGA ESTHER",
+    "FechaNacimiento": "1971-01-01T00:00:00",
+    "Telefono": 152752601,
+    "IdCategoria": 1,
+    "ImporteContribucion": 2105432.89
+  },
+  {
+    "IdContacto": 7,
+    "Nombre": "ARCE, YESICA J",
+    "FechaNacimiento": "1980-03-31T00:00:00",
+    "Telefono": 152728113,
+    "IdCategoria": 2,
+    "ImporteContribucion": 3876543.21
+  },
+  {
+    "IdContacto": 51,
+    "Nombre": "BARRIONUEVO, AIDA NORA",
+    "FechaNacimiento": "1948-01-01T00:00:00",
+    "Telefono": 152756285,
+    "IdCategoria": 1,
+    "ImporteContribucion": 4987654.32
+  },
+  {
+    "IdContacto": 94,
+    "Nombre": "BARRIONUEVO, ROQUE RAUL",
+    "FechaNacimiento": "1949-08-18T00:00:00",
+    "Telefono": 152065611,
+    "IdCategoria": 3,
+    "ImporteContribucion": 2345678.90
+  },
+  {
+    "IdContacto": 80,
+    "Nombre": "BARRIOS, AGUSTIN",
+    "FechaNacimiento": "1945-04-02T00:00:00",
+    "Telefono": 152766542,
+    "IdCategoria": 3,
+    "ImporteContribucion": 3456789.01
+  },
+  {
+    "IdContacto": 82,
+    "Nombre": "BLETRAMO, LEANDRO EMANUEL",
+    "FechaNacimiento": "1989-05-17T00:00:00",
+    "Telefono": 152762650,
+    "IdCategoria": 2,
+    "ImporteContribucion": 4123456.78
+  },
+  {
+    "IdContacto": 13,
+    "Nombre": "BOTTI, AMELIA HAYDEE",
+    "FechaNacimiento": "1942-03-24T00:00:00",
+    "Telefono": 152745100,
+    "IdCategoria": 2,
+    "ImporteContribucion": 2987654.32
+  },
+  {
+    "IdContacto": 57,
+    "Nombre": "BRITO, MIGUEL F",
+    "FechaNacimiento": "1940-09-04T00:00:00",
+    "Telefono": 152065152,
+    "IdCategoria": 2,
+    "ImporteContribucion": 3567890.12
+  },
+  {
+    "IdContacto": 88,
+    "Nombre": "BRIZUELA, JUAN AGUSTIN",
+    "FechaNacimiento": "1943-08-29T00:00:00",
+    "Telefono": 152071211,
+    "IdCategoria": 3,
+    "ImporteContribucion": 2678901.23
+  },
+  {
+    "IdContacto": 73,
+    "Nombre": "BUENO, GERARDO",
+    "FechaNacimiento": "1937-02-21T00:00:00",
+    "Telefono": 152065441,
+    "IdCategoria": 2,
+    "ImporteContribucion": 3890123.45
+  },
+  {
+    "IdContacto": 24,
+    "Nombre": "CARRANZA, FRANCISCA CORINA",
+    "FechaNacimiento": "1932-10-16T00:00:00",
+    "Telefono": 152715724,
+    "IdCategoria": 1,
+    "ImporteContribucion": 4567890.12
+  },
+  {
+    "IdContacto": 76,
+    "Nombre": "CENA, MARGARITA ROSA",
+    "FechaNacimiento": "1939-07-21T00:00:00",
+    "Telefono": 152799544,
+    "IdCategoria": 3,
+    "ImporteContribucion": 3123456.78
+  },
+  {
+    "IdContacto": 46,
+    "Nombre": "CONTRERAS, NORMA BEATRIZ",
+    "FechaNacimiento": "1969-08-08T00:00:00",
+    "Telefono": 152207851,
+    "IdCategoria": 3,
+    "ImporteContribucion": 2789012.34
+  },
+  {
+    "IdContacto": 77,
+    "Nombre": "CRISTALDO MARTINEZ, DEONILDA",
+    "FechaNacimiento": "1960-04-08T00:00:00",
+    "Telefono": 152792824,
+    "IdCategoria": 2,
+    "ImporteContribucion": 4234567.89
+  },
+  {
+    "IdContacto": 25,
+    "Nombre": "DELGADO, RAMONA",
+    "FechaNacimiento": "1950-01-25T00:00:00",
+    "Telefono": 152762645,
+    "IdCategoria": 3,
+    "ImporteContribucion": 3456781.23
+  },
+  {
+    "IdContacto": 48,
+    "Nombre": "DOMINGUEZ, AURORA",
+    "FechaNacimiento": "1949-12-21T00:00:00",
+    "Telefono": 152759797,
+    "IdCategoria": 2,
+    "ImporteContribucion": 3987654.32
+  },
+  {
+    "IdContacto": 27,
+    "Nombre": "DOMINGUEZ, MARTHA AMALIA",
+    "FechaNacimiento": "1950-06-27T00:00:00",
+    "Telefono": 152756368,
+    "IdCategoria": 3,
+    "ImporteContribucion": 2567890.12
+  },
+  {
+    "IdContacto": 59,
+    "Nombre": "ECHENIQUE, EFRAIN",
+    "FechaNacimiento": "1948-06-18T00:00:00",
+    "Telefono": 152380009,
+    "IdCategoria": 1,
+    "ImporteContribucion": 4876543.21
+  }
+    ]
+  );
+  
 }
 
 
