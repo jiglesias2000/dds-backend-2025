@@ -3,6 +3,7 @@ const categorias = require('./categoriasModel');
 const articulos = require('./articulosModel');
 const usuarios = require('./usuariosModel');
 const contactos = require('./contactosModel');
+const equiposf1 = require('./equiposf1Model');
 
 if (require.main === module) {
   inicializarBase();    // si se ejecuta este archivo directamente, inicializa la base de datos, si no se lo ejecutara antes de levantar el servidor
@@ -29,6 +30,7 @@ if (require.main === module) {
     await DatosArticulos();
     await DatosUsuarios();  
     await DatosContactos();
+    await DatosEquiposF1();
 
     console.log('Base de datos inicializada y datos de prueba creados.');
 
@@ -450,6 +452,247 @@ async function DatosContactos() {
   
 }
 
-
+async function DatosEquiposF1() {
+  await equiposf1.bulkCreate([
+  {
+    "NombreEquipo":"MCLAREN",
+    "NombreCorredor":"LANDO NORRIS",
+    "Presupuesto":56385627.28,
+    "FechaDeInicio":"1963/01/01",
+    "CampeonatosGanados":8
+  },
+  {
+    "NombreEquipo":"MCLAREN",
+    "NombreCorredor":"OSCAR PIASTRI",
+    "Presupuesto":54412540.61,
+    "FechaDeInicio":"1963/01/01",
+    "CampeonatosGanados":8
+  },
+  {
+    "NombreEquipo":"MCLAREN",
+    "NombreCorredor":"PATO O'WARD",
+    "Presupuesto":41639196.07,
+    "FechaDeInicio":"1963/01/01",
+    "CampeonatosGanados":8
+  },
+  {
+    "NombreEquipo":"FERRARI",
+    "NombreCorredor":"CHARLES LECLERC",
+    "Presupuesto":68152489.25,
+    "FechaDeInicio":"1929/01/01",
+    "CampeonatosGanados":16
+  },
+  {
+    "NombreEquipo":"FERRARI",
+    "NombreCorredor":"LEWIS HAMILTON",
+    "Presupuesto":33620867.39,
+    "FechaDeInicio":"1929/01/01",
+    "CampeonatosGanados":16
+  },
+  {
+    "NombreEquipo":"FERRARI",
+    "NombreCorredor":"ZHOU GUANYU",
+    "Presupuesto":74691667.75,
+    "FechaDeInicio":"1929/01/01",
+    "CampeonatosGanados":16
+  },
+  {
+    "NombreEquipo":"FERRARI",
+    "NombreCorredor":"ANTONIO GIOVINAZZI",
+    "Presupuesto":84550419.67,
+    "FechaDeInicio":"1929/01/01",
+    "CampeonatosGanados":16
+  },
+  {
+    "NombreEquipo":"RED BULL RACING",
+    "NombreCorredor":"MAX VERSTAPPEN",
+    "Presupuesto":73021724.90,
+    "FechaDeInicio":"2005/01/01",
+    "CampeonatosGanados":6
+  },
+  {
+    "NombreEquipo":"RED BULL RACING",
+    "NombreCorredor":"LIAM LAWSON",
+    "Presupuesto":64728503.39,
+    "FechaDeInicio":"2005/01/01",
+    "CampeonatosGanados":6
+  },
+  {
+    "NombreEquipo":"RED BULL RACING",
+    "NombreCorredor":"YUKI TSUNODA",
+    "Presupuesto":23949340.98,
+    "FechaDeInicio":"2005/01/01",
+    "CampeonatosGanados":6
+  },
+  {
+    "NombreEquipo":"RACING BULLS",
+    "NombreCorredor":"ISACK HADJAR",
+    "Presupuesto":21228555.33,
+    "FechaDeInicio":"2024/01/01",
+    "CampeonatosGanados":0
+  },
+  {
+    "NombreEquipo":"RACING BULLS",
+    "NombreCorredor":"YUKI TSUNODA",
+    "Presupuesto":50288433.74,
+    "FechaDeInicio":"2024/01/01",
+    "CampeonatosGanados":0
+  },
+  {
+    "NombreEquipo":"RACING BULLS",
+    "NombreCorredor":"AYUMU IWASA",
+    "Presupuesto":30211686.91,
+    "FechaDeInicio":"2024/01/01",
+    "CampeonatosGanados":0
+  },
+  {
+    "NombreEquipo":"MERCEDES",
+    "NombreCorredor":"GEORGE RUSSELL",
+    "Presupuesto":39373320.39,
+    "FechaDeInicio":"2010/01/01",
+    "CampeonatosGanados":8
+  },
+  {
+    "NombreEquipo":"MERCEDES",
+    "NombreCorredor":"ANDREA KIMI ANTONELLI",
+    "Presupuesto":51185328.77,
+    "FechaDeInicio":"2010/01/01",
+    "CampeonatosGanados":8
+  },
+  {
+    "NombreEquipo":"MERCEDES",
+    "NombreCorredor":"VALTTERI BOTTAS",
+    "Presupuesto":47011523.71,
+    "FechaDeInicio":"2010/01/01",
+    "CampeonatosGanados":8
+  },
+  {
+    "NombreEquipo":"MERCEDES",
+    "NombreCorredor":"FREDERIK VESTI",
+    "Presupuesto":56419434.27,
+    "FechaDeInicio":"2010/01/01",
+    "CampeonatosGanados":8
+  },
+  {
+    "NombreEquipo":"ASTON MARTIN",
+    "NombreCorredor":"FERNANDO ALONSO",
+    "Presupuesto":13198683.39,
+    "FechaDeInicio":"1959/01/01",
+    "CampeonatosGanados":0
+  },
+  {
+    "NombreEquipo":"ASTON MARTIN",
+    "NombreCorredor":"LANCE STROLL",
+    "Presupuesto":81252765.26,
+    "FechaDeInicio":"1959/01/01",
+    "CampeonatosGanados":0
+  },
+  {
+    "NombreEquipo":"ASTON MARTIN",
+    "NombreCorredor":"FELIPE DRUGOVICH",
+    "Presupuesto":15662027.06,
+    "FechaDeInicio":"1959/01/01",
+    "CampeonatosGanados":0
+  },
+  {
+    "NombreEquipo":"ASTON MARTIN",
+    "NombreCorredor":"STOFFEL VANDOORNE",
+    "Presupuesto":20785465.92,
+    "FechaDeInicio":"1959/01/01",
+    "CampeonatosGanados":0
+  },
+  {
+    "NombreEquipo":"ALPINE",
+    "NombreCorredor":"PIERRE GASLY",
+    "Presupuesto":86953303.89,
+    "FechaDeInicio":"2021/01/01",
+    "CampeonatosGanados":0
+  },
+  {
+    "NombreEquipo":"ALPINE",
+    "NombreCorredor":"FRANCO COLAPINTO",
+    "Presupuesto":81379858.17,
+    "FechaDeInicio":"2021/01/01",
+    "CampeonatosGanados":0
+  },
+  {
+    "NombreEquipo":"ALPINE",
+    "NombreCorredor":"JACK DOOHAN",
+    "Presupuesto":38650519.59,
+    "FechaDeInicio":"2021/01/01",
+    "CampeonatosGanados":0
+  },
+  {
+    "NombreEquipo":"ALPINE",
+    "NombreCorredor":"PAUL ARON",
+    "Presupuesto":70843486.87,
+    "FechaDeInicio":"2021/01/01",
+    "CampeonatosGanados":0
+  },
+  {
+    "NombreEquipo":"ALPINE",
+    "NombreCorredor":"RYO HIRAKAWA",
+    "Presupuesto":75884495.34,
+    "FechaDeInicio":"2021/01/01",
+    "CampeonatosGanados":0
+  },
+  {
+    "NombreEquipo":"HAAS",
+    "NombreCorredor":"ESTEBAN OCON",
+    "Presupuesto":38558737.71,
+    "FechaDeInicio":"2016/01/01",
+    "CampeonatosGanados":0
+  },
+  {
+    "NombreEquipo":"HAAS",
+    "NombreCorredor":"OLIVER BEARMAN",
+    "Presupuesto":68520587.48,
+    "FechaDeInicio":"2016/01/01",
+    "CampeonatosGanados":0
+  },
+  {
+    "NombreEquipo":"HAAS",
+    "NombreCorredor":"RYO HIRAKAWA",
+    "Presupuesto":2248591.12,
+    "FechaDeInicio":"2016/01/01",
+    "CampeonatosGanados":0
+  },
+  {
+    "NombreEquipo":"HAAS",
+    "NombreCorredor":"PIETRO FITTIPALDI",
+    "Presupuesto":96268497.23,
+    "FechaDeInicio":"2016/01/01",
+    "CampeonatosGanados":0
+  },
+  {
+    "NombreEquipo":"WILLIAMS",
+    "NombreCorredor":"ALEX ALBON",
+    "Presupuesto":75510142.26,
+    "FechaDeInicio":"1977/01/01",
+    "CampeonatosGanados":9
+  },
+  {
+    "NombreEquipo":"WILLIAMS",
+    "NombreCorredor":"CARLOS SAINZ",
+    "Presupuesto":59585426.10,
+    "FechaDeInicio":"1977/01/01",
+    "CampeonatosGanados":9
+  },
+  {
+    "NombreEquipo":"SAUBER",
+    "NombreCorredor":"NICO HULKENBERG",
+    "Presupuesto":89623199.95,
+    "FechaDeInicio":"1993/01/01",
+    "CampeonatosGanados":0
+  },
+  {
+    "NombreEquipo":"SAUBER",
+    "NombreCorredor":"GABRIEL BORTOLETO",
+    "Presupuesto":98972831.45,
+    "FechaDeInicio":"1993/01/01",
+    "CampeonatosGanados":0
+  }
+]);
+}
 
 module.exports = inicializarBase;

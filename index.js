@@ -27,6 +27,8 @@ const usuariosRouter = require("./routes/usuarios");
 app.use(usuariosRouter);
 const contactosRouter = require("./routes/contactos");
 app.use(contactosRouter);
+const equiposf1Router = require("./routes/equiposf1");
+app.use(equiposf1Router); 
 
 
 const frontendIncluidoEnPublic = false;
