@@ -30,10 +30,11 @@ router.get("/api/equiposf1", async function (req, res) {
     ],
     order: [["NombreEquipo", "ASC"]],
     where,
-    offset: (Pagina - 1) * TamañoPagina,
-    limit: TamañoPagina,
+//    offset: (Pagina - 1) * TamañoPagina,
+//    limit: TamañoPagina,
   });
-  return res.json({ Items: rows, RegistrosTotal: count });
+  //return res.json({ Items: rows, RegistrosTotal: count });
+  return res.json(rows);
 });
 
 // Obtener un equipo F1 por ID
